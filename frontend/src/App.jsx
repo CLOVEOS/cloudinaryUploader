@@ -20,7 +20,7 @@ export default function Upload() {
     if (!file) return;
 
     const formData = new FormData();
-    formData.append("image", file); // ✅ matches upload.single('image')
+    formData.append("image", file); 
 
     try {
       setLoading(true);
@@ -32,7 +32,7 @@ export default function Upload() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Upload failed");
 
-      setUploadedUrl(data.url_path); // ✅ matches backend response key
+      setUploadedUrl(data.url_path); // 
     } catch (err) {
       setError(err.message);
     } finally {
@@ -61,7 +61,7 @@ export default function Upload() {
 
       {uploadedUrl && (
         <div style={{ marginTop: "1rem" }}>
-          <p>✅ Uploaded!</p>
+          <p>Uploaded!</p>
           <img src={uploadedUrl} alt="uploaded" width={200} />
           <p>
             <a href={uploadedUrl} target="_blank" rel="noreferrer">
