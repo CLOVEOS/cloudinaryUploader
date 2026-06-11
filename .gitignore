@@ -1,7 +1,7 @@
 # Dependencies
 node_modules/
 
-# Environment variables (NEVER push this)
+# environment variables 
 .env
 
 # Vite build output
